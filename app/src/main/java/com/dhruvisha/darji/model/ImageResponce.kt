@@ -1,4 +1,13 @@
 package com.dhruvisha.darji.model
 
-class ImageResponce {
+import android.net.Uri
+
+
+data class ImageResponce(
+   val  albumId:Int,
+   val id:Int,
+   val title: String,
+   val url: Uri,
+   val thumbnailUrl: Uri
+) {
 }

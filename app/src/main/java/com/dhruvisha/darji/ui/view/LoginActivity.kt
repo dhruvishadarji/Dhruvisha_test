@@ -1,4 +1,4 @@
-package com.dhruvisha.darji.view
+package com.dhruvisha.darji.ui.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -69,7 +69,8 @@ class LoginActivity : AppCompatActivity() {
             if (edt_emailid.text.toString()=="hello@yopmail.com" && edt_password.text.toString()=="Password@123"){
                 clpb_loader.visibility=View.GONE
                 SharedPrefsHelp.setBoolean(this, "logIn", true);
-                 val intent=Intent(this,MainActivity::class.java)
+                 val intent=Intent(this,
+                     MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }

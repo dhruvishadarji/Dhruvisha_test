@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:id="@+id/root_view"
+    tools:context=".ui.view.LoginActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="16dp"
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="@id/constraint_layout"
+            android:hint="@string/email"
+            android:textColorHint=" #808080">
+
+            <EditText
+                android:id="@+id/edt_emailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="16dp"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:shadowColor="@color/colorAccent"
+                android:textColor="#808080"
+                android:textColorHint="#808080"
+                android:textColorLink="#05102A"
+                android:drawableLeft="@drawable/ic_email_24"
+                android:drawableStart="@drawable/ic_email_24" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_email"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            android:textColorHint="#808080"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_lock_24"
+                android:drawablePadding="16dp"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:shadowColor="@color/colorAccent"
+                android:textColor="#808080"
+                android:textColorHint="#808080"
+                android:drawableStart="@drawable/ic_lock_24" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintTop_toBottomOf="@id/txt_password"
+            android:id="@+id/acbtn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="40dp"
+            android:background="@drawable/button_visibility"
+            android:enabled="false"
+            android:text="@string/signin"
+            android:visibility="visible" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/clpb_loader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/acbtn_signin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_password" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

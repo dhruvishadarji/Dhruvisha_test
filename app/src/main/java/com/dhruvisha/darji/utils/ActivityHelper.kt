@@ -1,4 +1,4 @@
-package com.dhruvisha.darji
+package com.dhruvisha.darji.utils
 
 object ActivityHelper {
     fun isValidMail(email: String): Boolean {

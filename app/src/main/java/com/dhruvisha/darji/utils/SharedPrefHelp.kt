@@ -1,7 +1,8 @@
-package com.dhruvisha.darji
+package com.dhruvisha.darji.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.dhruvisha.darji.BuildConfig
 
 import com.google.gson.Gson
 import java.io.Serializable

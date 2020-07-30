@@ -1,4 +1,4 @@
-package com.dhruvisha.darji.view
+package com.dhruvisha.darji.ui.view
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dhruvisha_practical_task</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signin">Login</string>
+    <string name="required">Required</string>
+    <string name="enter_valid_email">Enter valid Email</string>
+    <string name="pw_contain_6_characters">Password must contain 6 characters</string>
+</resources>

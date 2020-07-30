@@ -1,4 +1,4 @@
-package com.dhruvisha.darji.view
+package com.dhruvisha.darji.ui.view
 
 import android.content.Intent
 import android.os.Bundle
